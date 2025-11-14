@@ -1,0 +1,21 @@
+@model List<ModernProducts.Models.Product>
+
+<h2>Modern Products (ASP.NET Core 8)</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Price.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
