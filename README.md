@@ -1,4 +1,4 @@
-\# Legacy WebForms → ASP.NET Core 8 MVC Migration  
+\# Legacy WebForms → ASP.NET Core 8 MVC Migration
 
 \*\*Real-world full-stack .NET migration demo\*\* – Shahin Izadi
 
@@ -66,19 +66,25 @@ From a classic ASP.NET WebForms app (GridView + ViewState bloat) to a clean, fas
 
 \### About me – Shahin Izadi
 
-\- Bachelor of Computer Engineering – Tehran University (2018-2024)
+\- Bachelor of Computer Engineering – Tehran University (2018-2024)  
 
-\- 2+ years freelance / indie .NET + Unity experience
+\- Recently moved to Yerevan, Armenia  
 
-\- Looking for my first full-time .NET Backend / Full-Stack role in Armenia (Yerevan) or remote
+\- Looking for my first full-time .NET (Backend / Full-Stack) role – junior or mid-level  
 
 \- English fluent (IELTS Academic Band 7.0)
 
 
 
-📧 meushahin8@gmail.com | ☎ +374-41-208038  | \[LinkedIn](https://linkedin.com/in/shahin-izadi)
+\*\*Contact\*\*  
+
+Email → meushahin8@gmail.com (fastest reply)  
+
+LinkedIn → linkedin.com/in/shahin-izadi  
+
+instagram → @Shahin\_eaz
 
 
 
-Open to junior/mid-level .NET positions – ready to contribute from day one.
+Open to Yerevan or remote opportunities. Happy to jump on a call anytime.
 
