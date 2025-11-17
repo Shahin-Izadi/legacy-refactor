@@ -1,1 +1,0 @@
-CREATE TABLE Products (Id INT IDENTITY PRIMARY KEY, Name NVARCHAR(100), Price DECIMAL(10,2)); INSERT INTO Products VALUES ('Laptop', 999.99), ('Mouse', 25.50); 
