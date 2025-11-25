@@ -1,6 +1,30 @@
-\# Legacy WebForms → ASP.NET Core 8 MVC Migration
+\# Legacy WebForms → ASP.NET Core 8 Migration
 
-\*\*Real-world full-stack .NET migration demo\*\* – Shahin Izadi
+
+
+\### Real-world full-stack .NET migration demo – Shahin Izadi
+
+
+
+!\[.NET 8](https://img.shields.io/badge/.NET-8.0-5C2D91?logo=.net\&logoColor=white)
+
+!\[C#](https://img.shields.io/badge/Language-C%23-blue)
+
+!\[EF Core](https://img.shields.io/badge/ORM-EF%20Core%208-512BD4)
+
+!\[SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC2927?logo=microsoft-sql-server)
+
+!\[BenchmarkDotNet](https://img.shields.io/badge/BenchmarkDotNet-0096D6)
+
+!\[License](https://img.shields.io/badge/License-MIT-yellow)
+
+
+
+A complete migration project that shows:
+
+\- Classic WebForms app (GridView + ViewState)
+
+\- Modern ASP.NET Core 8 MVC + EF Core
 
 
 
@@ -8,39 +32,9 @@ From a classic ASP.NET WebForms app (GridView + ViewState bloat) to a clean, fas
 
 
 
-\### Live Demo (run locally)
+\## Features
 
-\- Legacy WebForms → http://localhost:5001/Products.aspx
-
-\- Modern ASP.NET Core 8 → http://localhost:5000/Products
-
-
-
-\### Performance Proof (BenchmarkDotNet – Release)
-
-
-
-| Method  | Mean      | Ratio | Allocated | Alloc Ratio |
-
-|---------|-----------|-------|-----------|-------------|
-
-| Legacy  | 42.93 ms  | 1.00  | 9.69 KB   | 1.00        |
-
-| Modern  | \*\*5.06 ms\*\* | \*\*0.12\*\* | 7.96 KB | \*\*0.82\*\*    |
-
-
-
-\*\*→ 8.5× faster + 18 % less memory\*\*
-
-
-
-!\[Benchmark result](benchmark-result.png)
-
-
-
-\### What I did
-
-\- Migrated 15-year-old WebForms to modern ASP.NET Core 8 MVC + Razor
+\- Full migration from .NET Framework 4.8 WebForms to ASP.NET Core 8 MVC + Razor
 
 \- Replaced in-memory data with EF Core + SQL Server (migrations + seeding)
 
@@ -52,39 +46,111 @@ From a classic ASP.NET WebForms app (GridView + ViewState bloat) to a clean, fas
 
 
 
-\### Tech stack
+\## Project Structure
 
-\- .NET Framework 4.8 → .NET 8
+legacy-refactor/
 
-\- WebForms → ASP.NET Core 8 MVC + EF Core
+├── .github/workflows/        # CI/CD workflows
 
-\- SQL Server + migrations
+├── LegacyWebForms/           # Original .NET Framework 4.8 WebForms app
+
+│   ├── App\_Start/            # Routing + bundles
+
+│   ├── Content/              # CSS (Bootstrap + Site.css)
+
+│   ├── Properties/           # AssemblyInfo.cs
+
+│   ├── Scripts/              # JS (Bootstrap, jQuery, Modernizr, WebForms)
+
+│   ├── About.aspx            # Example pages
+
+│   ├── Products.aspx
+
+│   ├── Site.Master
+
+│   ├── Web.config
+
+│   └── ...
+
+├── ModernProducts/           # Modern ASP.NET Core 8 MVC app
+
+│   ├── Controllers/          # HomeController.cs, ProductsController.cs
+
+│   ├── Data/                 # ProductDbContext.cs
+
+│   ├── Migrations/           # EF Core migrations
+
+│   ├── Models/               # Product.cs, ErrorViewModel.cs
+
+│   ├── Properties/           # launchSettings.json
+
+│   ├── Views/                # Razor views (Home, Products, Shared)
+
+│   ├── wwwroot/              # Static files (css, js, lib)
+
+│   ├── appsettings.json
+
+│   └── Program.cs
+
+├── ModernProducts.Tests/     # Unit tests
+
+│   └── ProductsControllerTests.cs
+
+├── PerformanceDemo/          # BenchmarkDotNet comparison
+
+│   └── Program.cs
+
+├── benchmark-result.png      # Proof of 8.5× performance gain
+
+└── legacy-refactor.sln
+
+
+
+\## Performance Proof (BenchmarkDotNet – Release)
+
+
+
+| Method  | Mean      | Ratio | Allocated | Alloc Ratio |
+
+|---------|-----------|-------|-----------|-------------|
+
+| Legacy  | 42.93 ms  | 1.00  | 9.69 KB   | 1.00        |
+
+| Modern  | \*\*5.06 ms\*\* | \*\*0.12\*\* | \*\*7.96 KB\*\* | \*\*0.82\*\*    |
+
+
+
+\*\*→ 8.5× faster + 18 % less memory\*\*
+
+
+
+!\[Benchmark result](benchmark-result.png)
+
+
+
+\## Tech Stack
+
+\- ASP.NET Core 8 MVC
+
+\- Entity Framework Core 8 (Code First)
+
+\- SQL Server / SQLite (easy to switch)
 
 \- BenchmarkDotNet
 
-
-
-\### About me – Shahin Izadi
-
-\- Bachelor of Computer Engineering – Tehran University (2018-2024)  
-
-\- Recently moved to Yerevan, Armenia  
-
-\- Looking for my first full-time .NET (Backend / Full-Stack) role – junior or mid-level  
-
-\- English fluent (IELTS Academic Band 7.0)
+\- xUnit (for unit tests)
 
 
 
-\*\*Contact\*\*  
-
-Email → meushahin8@gmail.com (fastest reply)  
-
-LinkedIn → linkedin.com/in/shahin-izadi  
-
-instagram → @Shahin\_eaz
+\## Credit
 
 
 
-Open to Yerevan or remote opportunities. Happy to jump on a call anytime.
+This project was built from scratch to demonstrate real-world .NET migration skills.
+
+
+
+\## License
+
+MIT © \[Shahin Izadi] – happy to connect on LinkedIn – feel free to star if you like it!
 
