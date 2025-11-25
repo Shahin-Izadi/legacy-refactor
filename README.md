@@ -6,29 +6,19 @@
 
 
 
-!\[.NET 8](https://img.shields.io/badge/.NET-8.0-5C2D91?logo=.net\&logoColor=white)
+!\[.NET 8.0](https://img.shields.io/badge/.NET-8.0-5C2D91?logo=.net\&logoColor=white)
 
+!\[Language C#](https://img.shields.io/badge/Language-C%23-007ACC?logo=csharp\&logoColor=white)
 
+!\[Auth JWT](https://img.shields.io/badge/Auth-JWT-61DAFB)
 
-!\[C#](https://img.shields.io/badge/C%23-12-239120)
+!\[ORM EF Core 8](https://img.shields.io/badge/ORM-EF%20Core%208-512BD4)
 
+!\[Database SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC2927?logo=microsoft-sql-server\&logoColor=white)
 
+!\[Docs Swagger](https://img.shields.io/badge/Docs-Swagger-85EA2D?logo=swagger\&logoColor=black)
 
-!\[EF Core](https://img.shields.io/badge/EF\_Core\_8-512BD4)
-
-
-
-!\[SQL Server](https://img.shields.io/badge/SQL\_Server-CC2927?logo=microsoft-sql-server)
-
-
-
-!\[BenchmarkDotNet](https://img.shields.io/badge/BenchmarkDotNet-0.13.12-blue)
-
-
-
-!\[MIT](https://img.shields.io/badge/License-MIT-yellow)
-
-
+!\[License MIT](https://img.shields.io/badge/License-MIT-yellow)
 
 A complete migration project that shows:
 
