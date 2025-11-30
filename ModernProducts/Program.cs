@@ -37,5 +37,3 @@ app.MapControllerRoute(
     pattern: "{controller=Products}/{action=Index}/{id?}");
 
 app.Run();
-
-public class ProgramEntryPoint { }
