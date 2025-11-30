@@ -13,20 +13,21 @@ builder.Services.AddDbContext<ProductDbContext>(options =>
 var app = builder.Build();
 
 // Migrate DB on startup
-using (var scope = app.Services.CreateScope())
+if (app.Environment.IsDevelopment())
 {
-    var db = scope.ServiceProvider.GetRequiredService<ProductDbContext>();
-    db.Database.Migrate();
-
-
-    // Seed data
-    if (!db.Products.Any())
+    using (var scope = app.Services.CreateScope())
     {
-        db.Products.AddRange(
-            new Product { Name = "Laptop", Price = 999.99m },
-            new Product { Name = "Mouse", Price = 25.50m }
-        );
-        db.SaveChanges();
+        var db = scope.ServiceProvider.GetRequiredService<ProductDbContext>();
+        db.Database.Migrate();
+
+        if (!db.Products.Any())
+        {
+            db.Products.AddRange(
+                new Product { Name = "Laptop", Price = 999.99m },
+                new Product { Name = "Mouse", Price = 25.50m }
+            );
+            db.SaveChanges();
+        }
     }
 }
 

@@ -1,0 +1,21 @@
+services:
+  modernproducts:
+    image: ${DOCKER_REGISTRY-}modernproducts
+    build:
+      context: .
+      dockerfile: ModernProducts/Dockerfile
+    ports:
+      - "8080:80"  
+
+  sqlserver:  
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=YourStrong!Passw0rd
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlvolume:/var/opt/mssql
+
+volumes:
+  sqlvolume: 
